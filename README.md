@@ -1,5 +1,5 @@
 # horiseon-challenge
-Challenge 01 for UofU Coding Bootcamp -- refactoring a website for accessibility
+Refactoring a website for accessibility, displaying knowledge of semantic HTML, CSS styling, and new HTML tags and elements.
 
 [Link to the site -- deployed on Github Pages]()
 
