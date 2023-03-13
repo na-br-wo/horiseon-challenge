@@ -1,30 +1,56 @@
+/* '*' selector will modify any element in the webpage 
+if it is not otherwise styled with CSS */
 * {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
 
+/* The default font-size in paragraph elements */
+p {
+    font-size: 16px;
+}
+
+/* CSS styling on any text within the abbreviation HTML tag */
+abbr {
+    color: #d9dcd6;
+    font-style: italic;
+}
+
 body {
     background-color: #d9dcd6;
 }
 
-.header {
+/* styling for the header which will appear at the top of each webpage on the side */
+header {
     padding: 20px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     background-color: #2a607c;
     color: #ffffff;
 }
 
-.header h1 {
+/* The title of the website, which says "Horiseon" */
+header h1 {
     display: inline-block;
     font-size: 48px;
 }
 
-.header h1 .seo {
+/* Providing emphasis on the 'seo' letters in "Horiseon" */
+header .emphasis {
     color: #d9dcd6;
 }
 
-.header div {
+
+/* for any links within the header, not applying text decoration 
+(underlining or changing color on a clicked link) */
+header a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+
+/* header navbar, the clickable links  within the header*/
+header nav {
     padding-top: 15px;
     margin-right: 20px;
     float: right;
@@ -32,169 +58,100 @@ body {
     font-size: 20px;
 }
 
-.header div ul {
+/* list of options in the header navbar, each is a link */
+header ul {
     list-style-type: none;
 }
 
-.header div ul li {
+header ul li {
     display: inline-block;
     margin-left: 25px;
 }
 
-a {
-    color: #ffffff;
-    text-decoration: none;
-}
-
-p {
-    font-size: 16px;
-}
-
+/* Removed background-image CSS styling due to accessibility concerns, sourced the 
+image withing the HTML .hero div */
 .hero {
-    height: 800px;
-    width: 100%;
     margin-bottom: 25px;
-    background-image: url("../images/digital-marketing-meeting.jpg");
-    background-size: cover;
-    background-position: center;
 }
 
-.float-left {
+.hero img {
+    height: 800px;
+    width: 100%;   
+    object-position: center;
+}
+
+/* The main body of the webpage, composed of divs -- one for each link in the navbar */
+main {
+    width: 75%;
+    display: inline-block;
+    padding: 40px;
+    color: #ffffff;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+main div {
+    height: 300px;
+    padding: 50px;
+    margin-left: 20px;
+    margin-bottom: 25px;
+    background-color: #0072bb;
+}
+
+main img {
+    max-height: 200px;
+}
+
+main h2 {
+    font-size: 36px;
+    margin-bottom: 25px;   
+}
+
+#optimization img, #marketing img {
     float: left;
     margin-right: 25px;
 }
 
-.float-right {
+#reputation-management img {
     float: right;
     margin-left: 25px;
 }
 
-.content {
-    width: 75%;
-    display: inline-block;
-    margin-left: 20px;
-}
-
-.benefits {
-    margin-right: 20px;
+/* webpage aside, portions of Horiseon's business that are only indirectly related to
+the website's main content */
+aside {
+    margin-top: 40px;
+    margin-right: 25px;
+    margin-bottom: 32px;
     padding: 20px;
-    clear: both;
     float: right;
     width: 20%;
     height: 100%;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     background-color: #2589bd;
-}
-
-.benefit-lead {
-    margin-bottom: 32px;
     color: #ffffff;
 }
 
-.benefit-brand {
-    margin-bottom: 32px;
-    color: #ffffff;
+aside div {
+    padding: 20px;
 }
 
-.benefit-cost {
-    margin-bottom: 32px;
-    color: #ffffff;
-}
-
-.benefit-lead h3 {
-    margin-bottom: 10px;
-    text-align: center;
-}
-
-.benefit-brand h3 {
-    margin-bottom: 10px;
-    text-align: center;
-}
-
-.benefit-cost h3 {
-    margin-bottom: 10px;
-    text-align: center;
-}
-
-.benefit-lead img {
+aside img {
     display: block;
     margin: 10px auto;
     max-width: 150px;
 }
 
-.benefit-brand img {
-    display: block;
-    margin: 10px auto;
-    max-width: 150px;
+aside h3 {
+    text-align: center;
 }
 
-.benefit-cost img {
-    display: block;
-    margin: 10px auto;
-    max-width: 150px;
-}
-
-.search-engine-optimization {
-    margin-bottom: 20px;
-    padding: 50px;
-    height: 300px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: #0072bb;
-    color: #ffffff;
-}
-
-.online-reputation-management {
-    margin-bottom: 20px;
-    padding: 50px;
-    height: 300px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: #0072bb;
-    color: #ffffff;
-}
-
-.social-media-marketing {
-    margin-bottom: 20px;
-    padding: 50px;
-    height: 300px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: #0072bb;
-    color: #ffffff;
-}
-
-.search-engine-optimization img {
-    max-height: 200px;
-}
-
-.online-reputation-management img {
-    max-height: 200px;
-}
-
-.social-media-marketing img {
-    max-height: 200px;
-}
-
-.search-engine-optimization h2 {
-    margin-bottom: 20px;
-    font-size: 36px;
-}
-
-.online-reputation-management h2 {
-    margin-bottom: 20px;
-    font-size: 36px;
-}
-
-.social-media-marketing h2 {
-    margin-bottom: 20px;
-    font-size: 36px;
-}
-
-.footer {
+/* footer, appears at the bottom of each page on the website */
+footer {
     padding: 30px;
-    clear: both;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     text-align: center;
 }
 
-.footer h2 {
+footer h2 {
     font-size: 20px;
 }
